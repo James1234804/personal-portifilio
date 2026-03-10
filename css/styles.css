@@ -86,10 +86,12 @@ body{
 .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.5)}
 .card-links a{color:var(--accent);text-decoration:none}
 
-/* Project preview thumbnail — COMPACT */
-.preview-thumb{display:block;width:100%;height:160px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04);background:#071127;margin-bottom:0.75rem;box-shadow:0 10px 24px rgba(2,6,23,0.45)}
-.preview-thumb iframe{width:200%;height:200%;border:0;display:block;pointer-events:none;transition:transform .18s ease;transform:scale(0.5);transform-origin:top left}
-.preview-thumb:hover iframe{transform:scale(0.51)}
+/* Project preview thumbnail — clean banner, no iframe */
+.preview-thumb{display:flex;align-items:center;justify-content:center;width:100%;height:120px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);margin-bottom:0.75rem;text-decoration:none;transition:opacity .2s ease, transform .2s ease}
+.preview-thumb:hover{opacity:0.85;transform:translateY(-2px)}
+.preview-shallom{background:linear-gradient(135deg,#071a3e,#0b3d6b)}
+.preview-portfolio{background:linear-gradient(135deg,#071a2e,#00a886)}
+.preview-label{color:rgba(255,255,255,0.75);font-size:0.88rem;font-weight:600;text-align:center;padding:0 1rem}
 
 .project-card-inner{display:flex;flex-direction:column;gap:0.5rem}
 .project-card-left h3{margin:0 0 0.4rem;font-size:0.95rem}

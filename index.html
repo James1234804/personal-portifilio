@@ -8,62 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Karla:wght@400;700&display=swap" rel="stylesheet">
   <meta name="description" content="Professional portfolio of James Julus, front-end developer." />
-  <style>
-    :root{--accent:#0b67b2;--accent-2:#00a886;--text:#e6eef6;--muted:#94a3b8;--card:#0b1220;--glass:rgba(255,255,255,0.04);--radius:12px;--ease:cubic-bezier(.2,.9,.2,1)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Inter','Karla',system-ui,sans-serif;background:linear-gradient(180deg,#071027 0%,#07121a 100%);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 1.25rem}
-    .site-header{position:sticky;top:0;z-index:40;backdrop-filter:blur(8px);background:rgba(6,10,20,0.7);border-bottom:1px solid rgba(255,255,255,0.04)}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.65rem 0}
-    .logo{font-weight:700;font-size:1.05rem}
-    .nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.4rem;cursor:pointer}
-    .site-nav ul{display:flex;gap:1rem;list-style:none}
-    .site-nav a{color:var(--muted);padding:.35rem .5rem;border-radius:8px;transition:color .2s}
-    .site-nav a:hover{color:var(--text);background:var(--glass)}
-    .hero{padding:5rem 0 4rem;background:radial-gradient(circle at 10% 20%,rgba(11,103,178,.09),transparent 40%),radial-gradient(circle at 90% 80%,rgba(0,168,134,.06),transparent 40%)}
-    .hero-inner{display:flex;flex-direction:column;gap:.9rem}
-    .hero h1{font-size:2.2rem;font-weight:800}
-    .highlight{color:var(--accent)}
-    .lead{color:var(--muted);max-width:56ch;font-size:1.05rem}
-    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),#2b85d6);color:#fff;padding:.6rem 1.1rem;border-radius:10px;border:0;cursor:pointer;font-size:.9rem;font-weight:600;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
-    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,103,178,.25)}
-    .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,.08);color:var(--text);margin-left:.6rem}
-    .btn-secondary:hover{background:rgba(255,255,255,.04)}
-    .btn-live{background:linear-gradient(90deg,#23c06a,#0fb36b);color:#fff;padding:.45rem .85rem;border-radius:10px;font-weight:600;font-size:.85rem;display:inline-block}
-    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,.08);color:var(--muted);padding:.4rem .75rem;border-radius:10px;font-size:.85rem;display:inline-block}
-    .section{padding:4rem 0}
-    h2{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem}
-    .about-grid{display:grid;grid-template-columns:1fr 240px;gap:1.5rem;align-items:start}
-    .about-grid p{color:var(--muted);margin-bottom:.75rem}
-    .profile-card{background:var(--card);padding:1.25rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,.04)}
-    .avatar{height:100px;width:100px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));margin-bottom:.75rem}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.25rem}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));padding:1rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,.04);transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
-    .card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(2,6,23,.5)}
-    .card h3{font-size:1rem;font-weight:700;margin-bottom:.35rem}
-    .preview-thumb{display:flex;align-items:center;justify-content:center;width:100%;height:110px;border-radius:10px;margin-bottom:.85rem;border:1px solid rgba(255,255,255,.06);transition:opacity .2s,transform .2s}
-    .preview-thumb:hover{opacity:.85;transform:translateY(-2px)}
-    .preview-shallom{background:linear-gradient(135deg,#071a3e 0%,#0b3d6b 100%)}
-    .preview-portfolio{background:linear-gradient(135deg,#071a2e 0%,#005c4b 100%)}
-    .preview-label{color:rgba(255,255,255,.8);font-size:.88rem;font-weight:600;text-align:center;padding:0 1rem}
-    .project-desc{color:var(--muted);font-size:.88rem;margin-bottom:.65rem}
-    .tag-list{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.75rem}
-    .tag-pill{padding:.25rem .55rem;border-radius:999px;border:1px solid rgba(67,233,123,.2);color:#9fe9bb;font-size:.72rem}
-    .project-actions{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
-    .skill-list{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none}
-    .skill-list li{background:var(--glass);border:1px solid rgba(255,255,255,.04);padding:.45rem .8rem;border-radius:10px;color:var(--muted);font-size:.88rem}
-    .contact-form{display:grid;gap:.75rem;max-width:540px;margin-top:.5rem}
-    .contact-form label{display:flex;flex-direction:column;gap:.3rem;color:var(--muted);font-size:.9rem}
-    .contact-form input,.contact-form textarea{padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(255,255,255,.06);background:rgba(255,255,255,.03);color:var(--text);font-family:inherit;font-size:.9rem}
-    .contact-form input:focus,.contact-form textarea:focus{outline:2px solid var(--accent);border-color:transparent}
-    .form-status{color:var(--accent-2);min-height:1.2em;font-size:.9rem}
-    .site-footer{border-top:1px solid rgba(255,255,255,.04);padding:1.5rem 0;color:var(--muted);font-size:.88rem}
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
-    .reveal.visible{opacity:1;transform:none}
-    @media(max-width:900px){.about-grid{grid-template-columns:1fr}.site-nav{display:none}.nav-toggle{display:inline-block}.site-nav.open{display:block;position:absolute;right:1rem;top:60px;background:rgba(6,10,20,.95);padding:.75rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.06)}.site-nav.open ul{flex-direction:column;gap:.5rem}}
-    @media(max-width:480px){.hero h1{font-size:1.7rem}.cards{grid-template-columns:1fr}}
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
@@ -95,22 +40,22 @@
       </div>
     </section>
 
-    <section id="about" class="section container reveal">
+    <section id="about" class="section container about reveal">
       <h2>About me</h2>
       <div class="about-grid">
         <div>
           <p>Hello — I'm a front-end web developer specializing in building clean, responsive, and accessible user interfaces. My core skills are HTML, CSS and JavaScript; I'm also familiar with responsive design patterns, CSS Grid & Flexbox, accessibility best practices (WCAG), version control with Git, basic Node.js tooling, and performance optimization techniques. I enjoy turning ideas into polished, production-ready websites.</p>
           <p>I'm also an avid coder who leverages AI-powered tools like Claude and GitHub Copilot to accelerate development and learn new technologies faster — the same way modern developers use documentation and frameworks.</p>
-          <p>Email: <a href="mailto:jamesimbarashejulius@gmail.com" style="color:var(--accent)">jamesimbarashejulius@gmail.com</a> &nbsp;·&nbsp; Phone: <a href="tel:0781968103" style="color:var(--accent)">0781968103</a></p>
+          <p>Email: <a href="mailto:jamesimbarashejulius@gmail.com">jamesimbarashejulius@gmail.com</a> &nbsp;·&nbsp; Phone: <a href="tel:0781968103">0781968103</a></p>
         </div>
         <div class="profile-card">
-          <div class="avatar"></div>
+          <div class="avatar" aria-hidden="true"></div>
           <p><strong>Available for freelance &amp; full-time work.</strong></p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section container reveal">
+    <section id="projects" class="section container projects reveal">
       <h2>Selected projects</h2>
       <div class="cards">
 
@@ -121,13 +66,18 @@
           <h3>Shallom High — School Management System</h3>
           <p class="project-desc">A full-stack school management system with student, teacher and admin dashboards. Features attendance tracking, fee management, grade recording and role-based access. Built with Node.js, Express and PostgreSQL, deployed live on Railway.</p>
           <div class="tag-list">
-            <span class="tag-pill">HTML</span><span class="tag-pill">CSS</span><span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">Node.js</span><span class="tag-pill">Express</span><span class="tag-pill">PostgreSQL</span>
-            <span class="tag-pill">JWT Auth</span><span class="tag-pill">Railway</span>
+            <span class="tag-pill">HTML</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">JavaScript</span>
+            <span class="tag-pill">Node.js</span>
+            <span class="tag-pill">Express</span>
+            <span class="tag-pill">PostgreSQL</span>
+            <span class="tag-pill">JWT Auth</span>
+            <span class="tag-pill">Railway</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-live" href="https://step-by-step-production-ad72.up.railway.app/login.html" target="_blank" rel="noopener">Live Demo</a>
-            <a class="btn btn-outline" href="https://github.com/James1234804/step-by-step" target="_blank" rel="noopener">Source</a>
+            <a class="btn btn-outline btn-source" href="https://github.com/James1234804/step-by-step" target="_blank" rel="noopener">Source</a>
           </div>
         </article>
 
@@ -138,47 +88,57 @@
           <h3>Personal Portfolio — James Julus</h3>
           <p class="project-desc">My personal portfolio showcasing projects, skills and contact information. Built with clean HTML, CSS and JavaScript with smooth scroll animations.</p>
           <div class="tag-list">
-            <span class="tag-pill">HTML</span><span class="tag-pill">CSS</span><span class="tag-pill">JavaScript</span>
-            <span class="tag-pill">Responsive</span><span class="tag-pill">Accessibility</span>
+            <span class="tag-pill">HTML</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">JavaScript</span>
+            <span class="tag-pill">Responsive</span>
+            <span class="tag-pill">Accessibility</span>
           </div>
           <div class="project-actions">
             <a class="btn btn-live" href="https://james1234804.github.io/portifilio/" target="_blank" rel="noopener">Live</a>
-            <a class="btn btn-outline" href="https://github.com/james1234804/portifilio" target="_blank" rel="noopener">Source</a>
+            <a class="btn btn-outline btn-source" href="https://github.com/james1234804/portifilio" target="_blank" rel="noopener">Source</a>
           </div>
         </article>
 
       </div>
     </section>
 
-    <section id="skills" class="section container reveal">
+    <section id="skills" class="section container skills reveal">
       <h2>Skills</h2>
       <ul class="skill-list">
-        <li>HTML5 &amp; Semantic Markup</li><li>CSS3 — Flexbox &amp; Grid</li>
-        <li>Modern JavaScript (ES6+)</li><li>Responsive &amp; Mobile-first Design</li>
-        <li>Accessibility (WCAG) &amp; ARIA</li><li>Version Control (Git &amp; GitHub)</li>
-        <li>Node.js &amp; Express REST APIs</li><li>PostgreSQL &amp; SQLite Databases</li>
-        <li>JWT Authentication &amp; Role-based Access</li><li>Cloud Deployment (Railway)</li>
-        <li>Build Tools (npm, bundlers)</li><li>Performance Optimization &amp; Web Vitals</li>
-        <li>Cross-browser Testing &amp; Debugging</li><li>WordPress (Elementor)</li>
+        <li>HTML5 &amp; Semantic Markup</li>
+        <li>CSS3 — Flexbox &amp; Grid</li>
+        <li>Modern JavaScript (ES6+)</li>
+        <li>Responsive &amp; Mobile-first Design</li>
+        <li>Accessibility (WCAG) &amp; ARIA</li>
+        <li>Version Control (Git &amp; GitHub)</li>
+        <li>Node.js &amp; Express REST APIs</li>
+        <li>PostgreSQL &amp; SQLite Databases</li>
+        <li>JWT Authentication &amp; Role-based Access</li>
+        <li>Cloud Deployment (Railway)</li>
+        <li>Build Tools (npm, bundlers)</li>
+        <li>Performance Optimization &amp; Web Vitals</li>
+        <li>Cross-browser Testing &amp; Debugging</li>
+        <li>WordPress (Elementor)</li>
         <li>AI-assisted Development (Claude, GitHub Copilot)</li>
       </ul>
     </section>
 
-    <section id="contact" class="section container reveal">
+    <section id="contact" class="section container contact reveal">
       <h2>Contact</h2>
-      <p style="color:var(--muted);margin-bottom:.75rem">If you'd like to hire me or collaborate, send a message:</p>
-      <form class="contact-form" action="https://formsubmit.co/jamesimbarashejulius@gmail.com" method="POST" target="_blank">
+      <p>If you'd like to hire me or collaborate, send a message:</p>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/jamesimbarashejulius@gmail.com" method="POST" target="_blank">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="New portfolio message">
-        <label><span>Name</span><input type="text" name="name" required /></label>
-        <label><span>Email</span><input type="email" name="email" required /></label>
-        <label><span>Phone (optional)</span><input type="tel" name="phone" placeholder="0781968103" /></label>
-        <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-        <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.25rem">
-          <button class="btn" type="submit">Send message</button>
+        <label><span>Name</span><input type="text" name="name" id="name" required /></label>
+        <label><span>Email</span><input type="email" name="email" id="email" required /></label>
+        <label><span>Phone (optional)</span><input type="tel" name="phone" id="phone" placeholder="0781968103" /></label>
+        <label><span>Message</span><textarea name="message" id="message" rows="5" required></textarea></label>
+        <p>
+          <button class="btn" id="submit-btn" type="submit">Send message</button>
           <button class="btn btn-secondary" id="whatsapp-btn" type="button">Send via WhatsApp</button>
-        </div>
-        <p class="form-status" id="form-status" aria-live="polite"></p>
+        </p>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
     </section>
 
@@ -190,22 +150,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('site-nav');
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-    });
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)} });
-    }, {threshold:0.1});
-    document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
-    document.getElementById('whatsapp-btn').addEventListener('click', () => {
-      window.open('https://wa.me/263781968103?text=' + encodeURIComponent("Hi James, I saw your portfolio and would like to get in touch!"), '_blank');
-    });
-  </script>
-
+  <script src="js/script.js" defer></script>
 </body>
 </html>

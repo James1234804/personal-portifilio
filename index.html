@@ -29,6 +29,7 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero reveal">
       <div class="container hero-inner">
         <h1>Hi, I'm <span class="highlight">James Julus</span></h1>
@@ -40,13 +41,14 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section container about reveal">
       <h2>About me</h2>
       <div class="about-grid">
         <div>
           <p>Hello — I'm a front-end web developer specializing in building clean, responsive, and accessible user interfaces. My core skills are HTML, CSS and JavaScript; I'm also familiar with responsive design patterns, CSS Grid & Flexbox, accessibility best practices (WCAG), version control with Git, basic Node.js tooling, and performance optimization techniques. I enjoy turning ideas into polished, production-ready websites.</p>
           <p>I'm also an avid coder who leverages AI-powered tools like Claude and GitHub Copilot to accelerate development and learn new technologies faster — the same way modern developers use documentation and frameworks.</p>
-          <p>Email: <a href="/cdn-cgi/l/email-protection#8fe5eee2eafce6e2edeefdeefce7eae5fae3e6fafccfe8e2eee6e3a1ece0e2"><span class="__cf_email__" data-cfemail="cba1aaa6aeb8a2a6a9aab9aab8a3aea1bea7a2beb88baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></a> &nbsp;·&nbsp; Phone: <a href="tel:0781968103">0781968103</a></p>
+          <p>Email: <a href="mailto:jamesimbarashejulius@gmail.com">jamesimbarashejulius@gmail.com</a> &nbsp;·&nbsp; Phone: <a href="tel:0781968103">0781968103</a></p>
         </div>
         <div class="profile-card">
           <div class="avatar" aria-hidden="true"></div>
@@ -55,19 +57,22 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section container projects reveal">
       <h2>Selected projects</h2>
       <div class="cards">
 
         <article class="card">
           <a class="preview-thumb preview-shallom" href="https://step-by-step-production-ad72.up.railway.app/login.html" target="_blank" rel="noopener">
-            <div class="preview-label">🏫 Shallom High School Management System<br><span style="font-size:.78rem;opacity:.7;font-weight:400">Click to open live demo</span></div>
+            <div class="preview-label">
+              🏫 Shallom High School Management System
+              <span>Click to open live demo</span>
+            </div>
           </a>
           <h3>Shallom High — School Management System</h3>
           <p class="project-desc">A full-stack school management system with student, teacher and admin dashboards. Features attendance tracking, fee management, grade recording and role-based access. Built with Node.js, Express and PostgreSQL, deployed live on Railway.</p>
           <div class="demo-credentials">
-            <span>🔑 Demo login:</span>
-            <code>admin</code> / <code>admin123</code>
+            🔑 Demo login: <code>admin</code> / <code>admin123</code>
           </div>
           <div class="tag-list">
             <span class="tag-pill">HTML</span>
@@ -81,13 +86,14 @@
           </div>
           <div class="project-actions">
             <a class="btn btn-live" href="https://step-by-step-production-ad72.up.railway.app/login.html" target="_blank" rel="noopener">Live Demo</a>
-            <a class="btn btn-outline btn-source" href="https://github.com/James1234804/step-by-step" target="_blank" rel="noopener">Source</a>
+            <a class="btn btn-outline" href="https://github.com/James1234804/step-by-step" target="_blank" rel="noopener">Source</a>
           </div>
         </article>
 
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section container skills reveal">
       <h2>Skills</h2>
       <ul class="skill-list">
@@ -109,6 +115,7 @@
       </ul>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section container contact reveal">
       <h2>Contact</h2>
       <p>If you'd like to hire me or collaborate, send a message:</p>
@@ -130,4 +137,12 @@
   </main>
 
   <footer class="site-footer">
-    <div
+    <div class="container">
+      <p>&copy; <span id="year"></span> James Julius</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+
+</body>
+</html>
